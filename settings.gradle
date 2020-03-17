@@ -1,0 +1,3 @@
+rootProject.name='MyApplictions'
+include ':app'
+include ':regex'

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RegEx</string>
+    <string name="hashtag_followers_count">  %s followers </string>
+
+</resources>
