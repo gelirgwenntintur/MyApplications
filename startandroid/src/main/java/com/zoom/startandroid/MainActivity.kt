@@ -2,7 +2,6 @@ package com.zoom.startandroid
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,7 +11,7 @@ class MainActivity : AppCompatActivity() {
     private val transformingOperators: TransformingObservables by lazy { TransformingObservables() }
     private val filteringOperators: FilteringObservables by lazy { FilteringObservables() }
     private val combiningOperators: CombiningObservables by lazy { CombiningObservables() }
-    private val conditionOperators: ConditionObservables by lazy { ConditionObservables() }
+    private val conditionAndBooleanOperators: ConditionAndBooleanObservables by lazy { ConditionAndBooleanObservables() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,10 +20,10 @@ class MainActivity : AppCompatActivity() {
         //creationOperators
         //transformingOperators
 
-        filteringOperators.debounce(searchEditText)
+        //filteringOperators.debounce(searchEditText)
 
-        //combiningOperators
-        //conditionOperators
+        combiningOperators
+        //conditionAndBooleanOperators
     }
 
     override fun onStop() {
@@ -32,6 +31,6 @@ class MainActivity : AppCompatActivity() {
         creationOperators.onClear()
         transformingOperators.onClear()
         combiningOperators.onClear()
-        conditionOperators.onClear()
+        conditionAndBooleanOperators.onClear()
     }
 }
